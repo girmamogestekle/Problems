@@ -48,11 +48,12 @@ public class Menu {
         switch (questionId) {
             case 1:
                 solution = new Question1();
-                List<String> words = Arrays.asList("Apple", "apricot", "banana", "cherry", "blueberry");
-                solution.display(words);
+                solution.display();
                 doneQuestion(1);
                 break;
             case 2:
+                solution = new Question2();
+                solution.display();
                 doneQuestion(2);
                 break;
             default:
