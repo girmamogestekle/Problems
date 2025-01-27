@@ -2,7 +2,6 @@ package stream.api.problems.com;
 
 import java.util.*;
 import java.util.function.Consumer;
-import java.util.function.Predicate;
 
 public class Menu {
 
@@ -31,6 +30,9 @@ public class Menu {
         String question2 = "Question 2: Find top N frequent words in a paragraph?";
         trackQuestions.put(2, true);
         questions.put(2, question2);
+        String question3 = "Question 3: Filter even numbers?";
+        trackQuestions.put(3, true);
+        questions.put(3, question3);
     }
 
     public void questionDisplay(){
@@ -55,6 +57,11 @@ public class Menu {
                 solution = new Question2();
                 solution.display();
                 doneQuestion(2);
+                break;
+            case 3:
+                solution = new Question3();
+                solution.display();
+                doneQuestion(3);
                 break;
             default:
                 output.accept("Invalid question number");
