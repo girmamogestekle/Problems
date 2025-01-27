@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class Question1 implements Solution{
 
     private Map<Character, List<String>> groupByFirstCharacter = new HashMap<>();
-    List<String> words = new ArrayList<>();
+    List<String> words = Arrays.asList("Apple", "apricot", "banana", "cherry", "blueberry");
 
     @Override
     public void solution() {
@@ -16,8 +16,7 @@ public class Question1 implements Solution{
     }
 
     @Override
-    public void display(List<String> inputWords) {
-        words.addAll(inputWords);
+    public void display() {
         solution();
         System.out.println(groupByFirstCharacter.toString());
     }

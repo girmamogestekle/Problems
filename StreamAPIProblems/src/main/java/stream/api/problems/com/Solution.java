@@ -5,6 +5,6 @@ import java.util.List;
 public interface Solution {
 
     void solution();
-    void display(List<String> inputs);
+    void display();
 
 }
