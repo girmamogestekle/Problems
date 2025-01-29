@@ -10,6 +10,7 @@ public class Question3432 implements Solution{
     public void solution() {
         System.out.println("Question 3432: Count partitions with even sum difference?");
         int[] nums = {10, 10, 3, 7, 6};
+        System.out.println("The input is " + Arrays.toString(nums));
         int leftSum = nums[0];
         int rightSum = Arrays.stream(nums).reduce(0, Integer::sum) - leftSum;
         countEven = (leftSum - rightSum)%2 == 0? 1 : 0;

@@ -26,6 +26,9 @@ public class Menu {
 
 
     public void addQuestions() {
+        String question136 = "Question 136: Single Number?";
+        trackQuestions.put(136, true);
+        questions.put(136, question136);
         String question3432 = "Question 3432: Count partitions with even sum difference?";
         trackQuestions.put(3432, true);
         questions.put(3432, question3432);
@@ -48,6 +51,11 @@ public class Menu {
                 solution = new Question3432();
                 solution.display();
                 doneQuestion(3432);
+                break;
+            case 136:
+                solution = new Question136();
+                solution.display();
+                doneQuestion(136);
                 break;
             default:
                 output.accept("Invalid question number");
