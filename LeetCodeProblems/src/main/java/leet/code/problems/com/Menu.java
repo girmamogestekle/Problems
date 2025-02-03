@@ -29,13 +29,18 @@ public class Menu {
         String question136 = "Question 136: Single Number?";
         trackQuestions.put(136, true);
         questions.put(136, question136);
+        String question169 = "Question 169: Majority Element?";
+        trackQuestions.put(169, true);
+        questions.put(169, question169);
         String question3432 = "Question 3432: Count partitions with even sum difference?";
         trackQuestions.put(3432, true);
         questions.put(3432, question3432);
     }
 
     public void questionDisplay(){
-        trackQuestions.entrySet().stream().filter(Map.Entry::getValue)
+        trackQuestions.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .filter(Map.Entry::getValue)
                 .map(e -> questions.get(e.getKey()))
                 .forEach(output);
     }
@@ -47,16 +52,22 @@ public class Menu {
     public void questionSelect(){
         int questionId = scanner.nextInt();
         switch (questionId) {
-            case 3432:
-                solution = new Question3432();
-                solution.display();
-                doneQuestion(3432);
-                break;
             case 136:
                 solution = new Question136();
                 solution.display();
                 doneQuestion(136);
                 break;
+            case 169:
+                solution = new Question169();
+                solution.display();
+                doneQuestion(169);
+                break;
+            case 3432:
+                solution = new Question3432();
+                solution.display();
+                doneQuestion(3432);
+                break;
+
             default:
                 output.accept("Invalid question number");
         }
