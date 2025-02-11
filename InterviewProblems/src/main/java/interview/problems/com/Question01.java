@@ -21,6 +21,7 @@ public class Question01 implements Solution {
         int remind = sum/powTen;
         int nodeData = sum>9? sum%powTen:sum;
         node = new Node(nodeData);
+        Node currentNode = getCurrentNode(node);
         node.display();
         for(int i=input1.length-2; i>=0; i--) {
             sum = (input1[i] + input2[i]) + remind;
@@ -28,8 +29,9 @@ public class Question01 implements Solution {
             powTen = (int)(Math.pow(10, digits-1));
             remind = sum/powTen;
             nodeData = sum>9? sum%powTen:sum;
-            node.next = new Node(nodeData);
-            node.next.display();
+            currentNode = new Node(nodeData);
+            currentNode.next.display();
+            currentNode = getCurrentNode(currentNode);
         }
 
         if(remind > 0) node.next = new Node(nodeData);
@@ -57,6 +59,11 @@ public class Question01 implements Solution {
             count++;
         }
         return count;
+    }
+
+    private Node getCurrentNode(Node node){
+        this.node.next = node;
+        return node.next;
     }
 
 }
