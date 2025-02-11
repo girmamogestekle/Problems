@@ -10,7 +10,6 @@ public class Question02 implements Solution {
     public void solution() {
         System.out.println("Question 2: Given 2D array calculate the sum of diagonal elements.");
         int[][] myArray2D = {{1,2,3}, {4,5,6}, {7,8,9}};
-        System.out.println("The inputs are: " + Arrays.toString(myArray2D));
         System.out.println("The inputs are: " + Arrays.deepToString(myArray2D));
 
         for(int row = 0; row < myArray2D.length; row++) {
