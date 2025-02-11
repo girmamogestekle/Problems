@@ -32,6 +32,16 @@ public class Menu {
         String question2 = "Question 2: Given 2D array calculate the sum of diagonal elements.";
         trackQuestions.put(2, true);
         questions.put(2, question2);
+        String question3 = "Question 3: Given an array, write a function to get first, second best scores from the array and return it in new array.";
+        trackQuestions.put(3, true);
+        questions.put(3, question3);
+        String question4 = "Question 4: Write Java function called findMissingNumberInArray that takes an integer array containing n-1 unique elements from \" +\n" +
+                "                \"a range of 1 to n, with one missing number, and returns the missing number.";
+        trackQuestions.put(4, true);
+        questions.put(4, question4);
+        String question5 = "Question 5: Write a function which takes integer array as a parameter and returns a new integer array with unique elements. (remove duplicates)";
+        trackQuestions.put(5, true);
+        questions.put(5, question5);
     }
 
     public void questionDisplay(){
@@ -58,6 +68,21 @@ public class Menu {
                 solution = new Question02();
                 solution.display();
                 doneQuestion(2);
+                break;
+            case 3:
+                solution = new Question03();
+                solution.display();
+                doneQuestion(3);
+                break;
+            case 4:
+                solution = new Question04();
+                solution.display();
+                doneQuestion(4);
+                break;
+            case 5:
+                solution = new Question05();
+                solution.display();
+                doneQuestion(5);
                 break;
 
             default:
