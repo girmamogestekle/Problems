@@ -32,6 +32,9 @@ public class Menu {
         String question169 = "Question 169: Majority Element?";
         trackQuestions.put(169, true);
         questions.put(169, question169);
+        String question217 = "Question 217: Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.";
+        trackQuestions.put(217, true);
+        questions.put(217, question217);
         String question3432 = "Question 3432: Count partitions with even sum difference?";
         trackQuestions.put(3432, true);
         questions.put(3432, question3432);
@@ -61,6 +64,11 @@ public class Menu {
                 solution = new Question169();
                 solution.display();
                 doneQuestion(169);
+                break;
+            case 217:
+                solution = new Question217();
+                solution.display();
+                doneQuestion(217);
                 break;
             case 3432:
                 solution = new Question3432();
