@@ -14,7 +14,7 @@ public class Menu {
     private Solution solution;
 
     {
-        output.accept("Welcome to Loop Problems ");
+        output.accept("Welcome to Java Programming By Y.Daniel Liang Loop Problems ");
         output.accept("=================================================");
         output.accept("=================================================");
         addProblems();
