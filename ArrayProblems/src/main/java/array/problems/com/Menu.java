@@ -14,7 +14,7 @@ public class Menu {
     private Solution solution;
 
     {
-        output.accept("Welcome to Array Problems ");
+        output.accept("Welcome to Array Problems");
         output.accept("=================================================");
         output.accept("=================================================");
         addQuestions();
