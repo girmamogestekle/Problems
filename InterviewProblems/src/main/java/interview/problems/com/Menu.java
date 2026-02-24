@@ -26,19 +26,17 @@ public class Menu {
 
 
     public void addQuestions() {
-        String question01 = "Question 1: You are given two non-empty linked lists representing two non-negative integers. \" +\n" +
+        String question01 = "Question 01: You are given two non-empty linked lists representing two non-negative integers. \" +\n" +
                 "                \"The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.\" +\n" +
                 "                \"Example: Input 1: [2,4,3] and Input 2: [5,4,6] .... Output: [7,0,8]. Explanation: 342 + 465 = 807\"";
         trackQuestions.put(1, true);
         questions.put(1, question01);
-        String question02 = "Question 2: Write a program to count the repeating characters in a string.";
+        String question02 = "Question 02: Write a program to count the repeating characters in a string.";
         trackQuestions.put(2, true);
         questions.put(2, question02);
-        String question03 = "Question 3: Write a program to Identify most repeated word from a list.";
+        String question03 = "Question 03: Write a program to Identify most repeated word from a list.";
         trackQuestions.put(3, true);
         questions.put(3, question03);
-
-
     }
 
     public void questionDisplay(){

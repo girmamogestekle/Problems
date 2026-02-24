@@ -1,5 +1,7 @@
 package array.problems.com;
 
+import java.util.Arrays;
+
 public class Main {
 
     private static Menu menu = new Menu();
