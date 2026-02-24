@@ -10,7 +10,9 @@
         <module name="InterviewProblems" />
         <module name="LeetCodeProblems" />
         <module name="StreamAPIProblems" />
+        <module name="JavaProgrammingByY.DanielLiang" />
         <module name="ArrayProblems" />
+        <module name="Loops" />
       </profile>
     </annotationProcessing>
   </component>
