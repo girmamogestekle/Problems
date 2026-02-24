@@ -3,13 +3,30 @@ package array.problems.com;
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello From Array Problems!");
-        System.out.println("Test for github!");
 
-        ZeroStriping obj = new ZeroStriping();
-        int[][] test = {{1,2,3,4,5}, {6,0,8,9,10}, {11,12,13,14,15}, {16,17,18,19,0}};
-        int[][] result = obj.zeroStrip(test);
-        System.out.println(Arrays.deepToString(result));
+    private static Menu menu = new Menu();
+
+    public static void main(String[] args) {
+        menu.questionSelect();
+        long countNotSelectedQuestions = menu.sizeNotSelectedQuestions();
+        boolean doMoreQuestions = menu.doMoreQuestions();
+        while (countNotSelectedQuestions!=0 && doMoreQuestions) {
+            System.out.println();
+            System.out.println();
+            menu.questionDisplay();
+            System.out.println("Enter the question number");
+            menu.questionSelect();
+            countNotSelectedQuestions = menu.sizeNotSelectedQuestions();
+            if(countNotSelectedQuestions==0) {
+                System.out.println("=================================================");
+                System.out.println("=================================================");
+                System.out.println("You don't have any more questions!!! 😊😊😊");
+                System.out.println("Thank You !!!");
+                break;
+            }
+            doMoreQuestions = menu.doMoreQuestions();
+        }
+
     }
+
 }

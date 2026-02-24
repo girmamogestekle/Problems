@@ -1,4 +1,4 @@
-package leet.code.problems.com;
+package array.problems.com;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +14,7 @@ public class Menu {
     private Solution solution;
 
     {
-        output.accept("Welcome to Leetcode Problems ");
+        output.accept("Welcome to Array Problems ");
         output.accept("=================================================");
         output.accept("=================================================");
         addQuestions();
@@ -26,18 +26,22 @@ public class Menu {
 
 
     public void addQuestions() {
-        String question136 = "Question 136: Single Number?";
-        trackQuestions.put(136, true);
-        questions.put(136, question136);
-        String question169 = "Question 169: Majority Element?";
-        trackQuestions.put(169, true);
-        questions.put(169, question169);
-        String question217 = "Question 217: Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.";
-        trackQuestions.put(217, true);
-        questions.put(217, question217);
-        String question3432 = "Question 3432: Count partitions with even sum difference?";
-        trackQuestions.put(3432, true);
-        questions.put(3432, question3432);
+        String question1 = "Question 1: Write a function called middle that takes an array and returns a new array that contains all but the first and last elements.";
+        trackQuestions.put(1, true);
+        questions.put(1, question1);
+        String question2 = "Question 2: Given 2D array calculate the sum of diagonal elements.";
+        trackQuestions.put(2, true);
+        questions.put(2, question2);
+        String question3 = "Question 3: Given an array, write a function to get first, second best scores from the array and return it in new array.";
+        trackQuestions.put(3, true);
+        questions.put(3, question3);
+        String question4 = "Question 4: Write Java function called findMissingNumberInArray that takes an integer array containing n-1 unique elements from \" +\n" +
+                "                \"a range of 1 to n, with one missing number, and returns the missing number.";
+        trackQuestions.put(4, true);
+        questions.put(4, question4);
+        String question5 = "Question 5: Write a function which takes integer array as a parameter and returns a new integer array with unique elements. (remove duplicates)";
+        trackQuestions.put(5, true);
+        questions.put(5, question5);
     }
 
     public void questionDisplay(){
@@ -55,25 +59,30 @@ public class Menu {
     public void questionSelect(){
         int questionId = scanner.nextInt();
         switch (questionId) {
-            case 136:
-                solution = new Question136();
+            case 1:
+                solution = new Question01();
                 solution.display();
-                doneQuestion(136);
+                doneQuestion(1);
                 break;
-            case 169:
-                solution = new Question169();
+            case 2:
+                solution = new Question02();
                 solution.display();
-                doneQuestion(169);
+                doneQuestion(2);
                 break;
-            case 217:
-                solution = new Question217();
+            case 3:
+                solution = new Question03();
                 solution.display();
-                doneQuestion(217);
+                doneQuestion(3);
                 break;
-            case 3432:
-                solution = new Question3432();
+            case 4:
+                solution = new Question04();
                 solution.display();
-                doneQuestion(3432);
+                doneQuestion(4);
+                break;
+            case 5:
+                solution = new Question05();
+                solution.display();
+                doneQuestion(5);
                 break;
 
             default:
