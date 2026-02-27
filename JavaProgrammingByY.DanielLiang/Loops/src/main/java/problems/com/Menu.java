@@ -41,6 +41,10 @@ public class Menu {
         String problem04 = "Problem 4: Input and Output Redirections";
         trackProblems.put(4, true);
         problems.put(4, problem04);
+
+        String problem05 = "Problem 5: Multiplication Table";
+        trackProblems.put(5, true);
+        problems.put(5, problem05);
     }
 
     public void problemsDisplay(){
@@ -79,6 +83,11 @@ public class Menu {
                 doneProblem(4);
                 break;
             case 5:
+                solution = new Problem05();
+                solution.display();
+                doneProblem(5);
+                break;
+            case 6:
                 break;
 
             default:
