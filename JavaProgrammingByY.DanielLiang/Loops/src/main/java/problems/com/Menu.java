@@ -45,6 +45,14 @@ public class Menu {
         String problem05 = "Problem 5: Multiplication Table";
         trackProblems.put(5, true);
         problems.put(5, problem05);
+
+        String problem06 = "Problem 6: Minimizing Numeric Errors";
+        trackProblems.put(6, true);
+        problems.put(6, problem06);
+
+        String problem07 = "Problem 7: Finding the Greatest Common Divisor";
+        trackProblems.put(7, true);
+        problems.put(7, problem07);
     }
 
     public void problemsDisplay(){
@@ -88,6 +96,14 @@ public class Menu {
                 doneProblem(5);
                 break;
             case 6:
+                solution = new Problem06();
+                solution.display();
+                doneProblem(6);
+                break;
+            case 7:
+                solution = new Problem07();
+                solution.display();
+                doneProblem(7);
                 break;
 
             default:
